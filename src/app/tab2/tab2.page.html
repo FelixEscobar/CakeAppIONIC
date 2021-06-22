@@ -1,12 +1,31 @@
-<ion-header [translucent]="true">
+<!--<ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
       Tab 2
     </ion-title>
   </ion-toolbar>
 </ion-header>
+-->
 
-<ion-content [fullscreen]="true">
+<ion-content class="ion-padding" [fullscreen]="true">
+
+  <h3>Fresh taste of</h3>
+  <h4>Designer Cakes</h4>
+
+  <section class="filters-container">
+    <app-item-filter *ngFor="let item of filterOptions" [optionFilter]="item" [filterActived]="filterActived"
+      (categoryChoosed)="categoryChoosed($event)">
+    </app-item-filter>
+  </section>
+
+
+  <section class="grid-products">
+
+    <app-product class="product" [product]="product" *ngFor="let product of products"></app-product>
+
+  </section>
+
+  <!--
   <ion-header collapse="condense">
     <ion-toolbar>
       <ion-title size="large">Tab 2</ion-title>
@@ -14,4 +33,6 @@
   </ion-header>
 
   <app-explore-container name="Tab 2 page"></app-explore-container>
+-->
+
 </ion-content>

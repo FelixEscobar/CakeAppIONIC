@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+//import { BarcodeScanner } from '@ionic-native/barcode-scanner/ngx';
+
 
 @Component({
   selector: 'app-tab1',
@@ -6,7 +8,17 @@ import { Component } from '@angular/core';
   styleUrls: ['tab1.page.scss']
 })
 export class Tab1Page {
+/*
+  public textScan: string = '';
 
-  constructor() {}
+  constructor(private barcodeScanner: BarcodeScanner) {}
 
+  public lauchCamera () {
+    this.barcodeScanner.scan().then(barcodeData) => {
+      this.textScan = barcodeData.text;
+    }).catch(error => {
+      this.textScan = error;
+    })     
+  }
+*/
 }
